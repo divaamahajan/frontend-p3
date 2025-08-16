@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from "./components/Home";
-import Chat from "./components/chatbot/ChatWindow";
-import QA from "./components/QAchatbot/QAChatWindow";
-import Filehandler from "./components/filehandler/Filehandler";
 import LoginView from './components/login/LoginView';
 import ProfileView from './components/login/ProfileView';
+import Dashboard from "./components/engagement/Dashboard";
+import ErrorBoundary from "./components/engagement/ErrorBoundary";
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -39,9 +38,16 @@ function App() {
           element={!user ? <LoginView onLoginSuccess={handleLoginSuccess} /> : <Navigate to="/home" replace />}
         />
 
-        <Route path="/chat" element={<Chat user={user} />} />
-        <Route path="/qa" element={<QA user={user} token={localStorage.getItem("token")} />} />
-        <Route path="/filehandler" element={<Filehandler user={user} token={localStorage.getItem("token")} />} />
+        <Route path="/engagement" element={
+          <ErrorBoundary>
+            <Dashboard user={user} />
+          </ErrorBoundary>
+        } />
+        <Route path="/dashboard" element={
+          <ErrorBoundary>
+            <Dashboard user={user} />
+          </ErrorBoundary>
+        } />
 
         <Route
           path="/profile"

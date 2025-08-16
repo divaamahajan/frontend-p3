@@ -20,8 +20,8 @@ function Navbar({ user, onLogout }) {
       <div style={styles.container}>
         <div style={styles.brand}>
           <Link to="/home" style={styles.brandLink}>
-            <span style={styles.brandIcon}>⚡</span>
-            ProductivePro
+            <span style={styles.brandIcon}>📊</span>
+            Employee Engagement Pulse
           </Link>
         </div>
 
@@ -37,33 +37,13 @@ function Navbar({ user, onLogout }) {
           </Link>
           
           <Link 
-            to="/chat" 
+            to="/engagement" 
             style={{
               ...styles.navLink,
-              ...(isActive('/chat') ? styles.activeLink : {})
+              ...(isActive('/engagement') ? styles.activeLink : {})
             }}
           >
-            Chat
-          </Link>
-          
-          <Link 
-            to="/qa" 
-            style={{
-              ...styles.navLink,
-              ...(isActive('/qa') ? styles.activeLink : {})
-            }}
-          >
-            Q&A
-          </Link>
-          
-          <Link 
-            to="/filehandler" 
-            style={{
-              ...styles.navLink,
-              ...(isActive('/filehandler') ? styles.activeLink : {})
-            }}
-          >
-            Files
+            Engagement Dashboard
           </Link>
 
           {user && (

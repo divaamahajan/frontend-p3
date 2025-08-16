@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Employee Engagement Pulse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application for monitoring team engagement and sentiment with real-time insights from Slack channels.
+
+## Overview
+
+Employee Engagement Pulse provides managers with a weekly sentiment dashboard built from all messages in configurable Slack channels. The app monitors user-defined Slack channels (including threads and reactions), runs text & emoji sentiment analysis on every message, aggregates daily mood into weekly trends with burnout warnings, and generates actionable, team-level insights for managers.
+
+## Features
+
+- **Slack Channel Monitoring**: Monitor user-defined Slack channels including threads and reactions
+- **AI Sentiment Analysis**: Advanced text and emoji sentiment analysis on every message
+- **Weekly Trend Analytics**: Aggregate daily mood data into weekly trends with visual charts
+- **Burnout Warning System**: Proactive alerts when team engagement drops
+- **Actionable Insights**: Generate team-level insights and recommendations for managers
+- **Real-time Updates**: Live monitoring and instant alerts
 
 ## Available Scripts
 
